@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Transaction Notification</title>
+    <title>Payment Successful</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -84,35 +84,40 @@
           "
         >
           <p style="margin-top: 2rem">
-            Hello {{first_name}},<br />
-            <br />
-
-            Your payment has been successfully processed.
-
+            <span style="font-size: 24px; font-weight: 700; color: #ffffff">
+              Your Payment Was Successful 🎉
+            </span>
             <br />
             <br />
-
-            Amount:
-            <span style="font-size: 17px; font-weight: 900; color: #ff4141">&#8358;{{amount}}</span>
-            <br />
-            Transaction ID: {{transaction_id}}
-            <br />
-            Date: {{transaction_date}}
-
-            <br />
-            <br />
-
-            Thank you for your payment.
-            <br />
-            If you don't recognise this transaction, please contact our support team
-            immediately.
-
-            <br />
-            <br />
-            Best regards,
-            <br />
-            The Chatrizz Team
+            Hi {{first_name}}, thank you for your payment. Your transaction has been
+            completed successfully.
           </p>
+          <div style="background-color: #0a2530; padding: 20px; margin: 20px 0; border-radius: 8px">
+            <p style="font-size: 18px; font-weight: 700; color: #ffffff; margin-top: 0">
+              Payment Details
+            </p>
+            <table style="width: 100%; border-collapse: collapse; color: #cfe0e6">
+              <tr>
+                <td style="padding: 8px 0">Amount</td>
+                <td style="padding: 8px 0; text-align: right; font-weight: 700; color: #ffffff">
+                  &#8358;{{amount}}
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0">Date</td>
+                <td style="padding: 8px 0; text-align: right">{{transaction_date}}</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0">Confirmation</td>
+                <td style="padding: 8px 0; text-align: right">{{transaction_id}}</td>
+              </tr>
+            </table>
+          </div>
+          <p>
+            If you don't recognize this transaction, please contact our support team
+            immediately.
+          </p>
+          <p>Best regards,<br />The Chatrizz Team</p>
         </div>
       </div>
 
